@@ -1,8 +1,12 @@
 pre-commit:
   commands:
+    prettier:
+      run: npm run prettier:check
     lint:
       run: npm run lint
 pre-push:
   commands:
+    size:
+      run: npm run size
     test:
       run: npm run test
