@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "declaration": true,
+    "module": "commonjs",
+    "target": "es5",
+    "noImplicitAny": true,
+    "resolveJsonModule": true,
+    "sourceMap": false,
+    "outDir": "dist",
+    "baseUrl": ".",
+    "lib": [ "esnext" ],
+    "paths": {
+      "*": ["node_modules/*"]
+    },
+    "strictNullChecks": true,
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "removeComments": true
+  },
+  "include": [
+    "src/index.ts"
+  ]
+}

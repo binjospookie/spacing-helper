@@ -1,0 +1,33 @@
+{
+  "name": "spacing-helper",
+  "version": "1.0.0",
+  "description": "Standalone helper for creating consistent spacing between the elements of your UI",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "license": "MIT",
+  "author": "v.pasynok",
+  "email": "binjospookie@gmail.com",
+  "private": false,
+  "scripts": {
+    "clean": "rm -rf ./dist",
+    "build": "npm run clean && tsc && npm run prepublish",
+    "lint": "npm run prettier:check && tslint -c tslint.json 'src/**/*.ts'",
+    "prepublish": "tsc && terser dist/index.js -m -c --output dist/index.js",
+    "prettier:base": "prettier --parser typescript",
+    "prettier:check": "yarn run prettier:base --list-different \"src/**/*.ts\"",
+    "prettier:write": "yarn run prettier:base --write \"src/**/*.ts\"",
+    "size": "size-limit",
+    "test": "jest --detectOpenHandles && npm run size"
+  },
+  "devDependencies": {
+    "@arkweid/lefthook": "0.6.3",
+    "@size-limit/preset-small-lib": "2.1.6",
+    "@types/jest": "24.0.22",
+    "jest": "24.9.0",
+    "prettier": "1.19.1",
+    "terser": "4.3.9",
+    "ts-jest": "24.1.0",
+    "tslint": "5.20.1",
+    "typescript": "3.7.2"
+  }
+}

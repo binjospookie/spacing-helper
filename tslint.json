@@ -1,0 +1,18 @@
+{
+  "defaultSeverity": "error",
+  "extends": [
+    "tslint:recommended"
+  ],
+  "rules": {
+    "quotemark": [
+      true,
+      "single"
+    ],
+    "arrow-parens": false,
+    "no-empty": false,
+    "no-any": true,
+    "unnecessary-constructor": true,
+    "no-default-export": true
+  },
+  "rulesDirectory": []
+}
