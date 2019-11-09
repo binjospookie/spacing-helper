@@ -2,8 +2,6 @@
 
 Standalone helper for creating consistent spacing between the elements of your UI.
 
-`npm i --save-dev spacing-helper || yarn add spacing-helper --dev`
-
 ```typescript
 import { createSpacing } from 'spacing-helper';
 const spacing = createSpacing(8); // 8 is default scaling factor
