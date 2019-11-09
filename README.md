@@ -2,9 +2,7 @@
 
 Standalone helper for creating consistent spacing between the elements of your UI.
 
-```
-npm i --save-dev spacing-helper or yarn add spacing-helper --dev
-```
+`npm i --save-dev spacing-helper || yarn add spacing-helper --dev`
 
 ```typescript
 import { createSpacing } from 'spacing-helper';
