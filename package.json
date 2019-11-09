@@ -17,7 +17,7 @@
     "prettier:check": "yarn run prettier:base --list-different \"src/**/*.ts\"",
     "prettier:write": "yarn run prettier:base --write \"src/**/*.ts\"",
     "size": "size-limit",
-    "test": "jest --detectOpenHandles"
+    "test": "jest --detectOpenHandles && npm run size"
   },
   "devDependencies": {
     "@arkweid/lefthook": "0.6.3",
