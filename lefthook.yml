@@ -4,5 +4,5 @@ pre-commit:
       run: npm run lint
 pre-push:
   commands:
-      lint:
-        run: npm run test
+    lint:
+      run: npm run test
