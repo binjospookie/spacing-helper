@@ -40,3 +40,13 @@ const HeaderStyled = styled.header`
     ...
 `;
 ```
+
+## More examples
+```
+const spacing = createSpacing(8);
+
+expect(spacing(2)).toBe('16px');
+expect(spacing(1, 2)).toBe('8px 16px');
+expect(spacing(1, 2, 3)).toBe('8px 16px 24px');
+expect(spacing(1, 2, 3, 4)).toBe('8px 16px 24px 32px');
+```
