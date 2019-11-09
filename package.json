@@ -8,6 +8,14 @@
   "author": "v.pasynok",
   "email": "binjospookie@gmail.com",
   "private": false,
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:binjospookie/spacing-helper.git"
+  },
+  "bugs": {
+    "url": "https://github.com/binjospookie/spacing-helper/issues"
+  },
+  "homepage": "https://github.com/binjospookie/spacing-helper#readme",
   "scripts": {
     "clean": "rm -rf ./dist",
     "build": "npm run clean && tsc && npm run prepublish",
