@@ -8,6 +8,9 @@ const spacing = createSpacing(8); // 8 is default scaling factor
 spacing(1,2,3,4); // '8px 16px 24px 32px'
 ```
 
+## Installation
+`npm i spacing-helper`
+
 ## Motivation
 
 Let's see some code
