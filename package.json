@@ -1,6 +1,6 @@
 {
   "name": "spacing-helper",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Standalone helper for creating consistent spacing between the elements of your UI",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -28,13 +28,13 @@
     "test": "jest --detectOpenHandles"
   },
   "devDependencies": {
-    "@arkweid/lefthook": "0.6.3",
-    "@size-limit/preset-small-lib": "2.1.6",
-    "@types/jest": "24.0.22",
+    "@arkweid/lefthook": "0.6.5",
+    "@types/jest": "24.0.23",
+    "@size-limit/preset-small-lib": "2.2.1",
     "jest": "24.9.0",
     "prettier": "1.19.1",
-    "terser": "4.3.9",
-    "ts-jest": "24.1.0",
+    "terser": "4.4.0",
+    "ts-jest": "24.2.0",
     "tslint": "5.20.1",
     "typescript": "3.7.2"
   }

@@ -2,17 +2,20 @@
 
 Standalone helper for creating consistent spacing between the elements of your UI.
 
-```typescript
+```js
 import { createSpacing } from 'spacing-helper';
 const spacing = createSpacing(8); // 8 is default scaling factor
 spacing(1,2,3,4); // '8px 16px 24px 32px'
 ```
 
+## Installation
+`npm i spacing-helper`
+
 ## Motivation
 
 Let's see some code
 
-```
+```js
 const MODULE = 8;
 
 const HeaderStyled = styled.header`
@@ -23,7 +26,7 @@ const HeaderStyled = styled.header`
 
 Make it pretty
 
-```
+```js
 const HeaderStyled = styled.header`
     margin: ${spacing(2)} ${spacing(3)};
     ...
@@ -32,7 +35,7 @@ const HeaderStyled = styled.header`
 
 And...
 
-```
+```js
 const HeaderStyled = styled.header`
     margin: ${spacing(2, 3)};
     ...
@@ -40,7 +43,7 @@ const HeaderStyled = styled.header`
 ```
 
 ## More examples
-```
+```js
 const spacing = createSpacing(8);
 
 expect(spacing(2)).toBe('16px');
