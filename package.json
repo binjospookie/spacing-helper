@@ -18,12 +18,10 @@
   "homepage": "https://github.com/binjospookie/spacing-helper#readme",
   "scripts": {
     "clean": "rm -rf ./dist",
-    "build": "npm run clean && tsc && npm run prepublish",
+    "build": "npm run clean && npm run prepublish",
     "lint": "tslint -c tslint.json 'src/**/*.ts'",
     "prepublish": "tsc && terser dist/index.js -m -c --output dist/index.js",
-    "prettier:base": "prettier --parser typescript",
-    "prettier:check": "yarn run prettier:base --list-different \"src/**/*.ts\"",
-    "prettier:write": "yarn run prettier:base --write \"src/**/*.ts\"",
+    "prettier": "prettier --check \"src/**/*.ts\"",
     "size": "size-limit",
     "test": "ava"
   },
