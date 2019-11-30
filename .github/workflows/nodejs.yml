@@ -21,5 +21,6 @@ jobs:
       run: |
         npm ci --silent
         npm run test
+        npm run size
       env:
         CI: true
