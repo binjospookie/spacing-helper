@@ -37,6 +37,7 @@
   },
   "ava": {
     "compileEnhancements": false,
+    "concurrency": 10,
     "extensions": [
       "ts"
     ],
