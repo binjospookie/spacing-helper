@@ -30,7 +30,7 @@
     "@size-limit/preset-small-lib": "2.2.1",
     "ava": "2.4.0",
     "prettier": "1.19.1",
-    "terser": "4.4.0",
+    "terser": "4.4.1",
     "ts-node": "8.5.4",
     "tslint": "5.20.1",
     "typescript": "3.7.2"
