@@ -26,7 +26,7 @@
     "test": "ava"
   },
   "devDependencies": {
-    "@arkweid/lefthook": "0.6.5",
+    "@arkweid/lefthook": "0.6.6",
     "@size-limit/preset-small-lib": "2.2.1",
     "ava": "2.4.0",
     "prettier": "1.19.1",
