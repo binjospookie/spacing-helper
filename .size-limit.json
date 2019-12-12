@@ -1,6 +1,6 @@
 [
   {
-    "path": "dist/index.js",
+    "path": "build/index.es.js",
     "limit": "100 B"
   }
 ]

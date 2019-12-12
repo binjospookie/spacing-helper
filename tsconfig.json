@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "declaration": true,
-    "module": "commonjs",
+    "module": "esnext",
     "target": "es2017",
     "noImplicitAny": true,
     "resolveJsonModule": true,
@@ -16,7 +16,8 @@
     "forceConsistentCasingInFileNames": true,
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
-    "removeComments": true
+    "removeComments": true,
+    "moduleResolution": "node"
   },
   "include": [
     "src/index.ts"
