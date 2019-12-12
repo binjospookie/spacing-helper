@@ -21,7 +21,7 @@
     "lint": "tslint -c tslint.json 'src/**/*.ts'",
     "prepublish": "npx rollup -c ./rollup.config.js",
     "prettier": "prettier --check \"src/**/*.ts\"",
-    "size": "size-limit",
+    "size": "npm run build && size-limit",
     "test": "ava"
   },
   "devDependencies": {
