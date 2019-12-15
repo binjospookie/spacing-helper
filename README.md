@@ -1,8 +1,10 @@
 # Spacing-helper
-
-Standalone helper for creating consistent spacing between the elements of your UI.
+![Typed with TypeScript](https://flat.badgen.net/badge/icon/Typed?icon=typescript&label&labelColor=blue&color=555555)
 ![Version](https://badgen.net/npm/v/spacing-helper)
 ![Size](https://badgen.net/bundlephobia/minzip/spacing-helper)
+
+
+Standalone helper for creating consistent spacing between the elements of your UI.
 
 ```js
 import { createSpacing } from 'spacing-helper';
