@@ -1,12 +1,15 @@
 {
   "name": "spacing-helper",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Standalone helper for creating consistent spacing between the elements of your UI",
   "main": "build/index.es.js",
   "types": "build/index.d.ts",
   "license": "MIT",
   "author": "v.pasynok",
   "email": "binjospookie@gmail.com",
+  "keywords": [
+    "cssinjs", "emotion", "styled-components", "ui", "helper", "spacing"
+  ],
   "private": false,
   "files": [
     "build"
