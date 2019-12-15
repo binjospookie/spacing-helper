@@ -1,6 +1,8 @@
 # Spacing-helper
 
 Standalone helper for creating consistent spacing between the elements of your UI.
+![Version](https://badgen.net/npm/v/spacing-helper)
+![Size](https://badgen.net/bundlephobia/minzip/spacing-helper)
 
 ```js
 import { createSpacing } from 'spacing-helper';
