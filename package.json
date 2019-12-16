@@ -18,7 +18,8 @@
   "private": false,
   "sideEffects": false,
   "files": [
-    "build"
+    "build/index.es.js",
+    "build/index.d.ts"
   ],
   "repository": {
     "type": "git",
