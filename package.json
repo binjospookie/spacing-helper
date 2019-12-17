@@ -39,7 +39,7 @@
   },
   "devDependencies": {
     "@arkweid/lefthook": "0.6.7",
-    "@size-limit/preset-small-lib": "2.2.2",
+    "@size-limit/preset-small-lib": "2.2.3",
     "ava": "2.4.0",
     "esm": "3.2.25",
     "prettier": "1.19.1",
