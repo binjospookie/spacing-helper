@@ -38,7 +38,7 @@
     "test": "ava"
   },
   "devDependencies": {
-    "@arkweid/lefthook": "0.6.7",
+    "@arkweid/lefthook": "0.7.0",
     "@size-limit/preset-small-lib": "2.2.3",
     "ava": "2.4.0",
     "esm": "3.2.25",
