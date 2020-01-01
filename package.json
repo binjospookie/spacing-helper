@@ -39,6 +39,7 @@
   },
   "devDependencies": {
     "@arkweid/lefthook": "0.7.0",
+    "@rollup/plugin-typescript": "^2.0.1",
     "@size-limit/preset-small-lib": "2.2.4",
     "ava": "2.4.0",
     "esm": "3.2.25",
