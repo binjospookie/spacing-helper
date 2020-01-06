@@ -12,12 +12,9 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: 13.5.0
-          registry-url: https://registry.npmjs.org/
       - run: npm ci --silent
+      - run: echo //registry.npmjs.org/:_authToken=${{secrets.NPM_TOKEN}} > .npmrc
       - run: npm run test
       - run: npm run size
       - run: npm run build
-      - run: npm publish --access public
-      - run: echo .npmrc
-        env:
-          NPM_TOKEN: ${{secrets.NPM_TOKEN}}
+      - run: npm publish
