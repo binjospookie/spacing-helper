@@ -6,25 +6,17 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        node-version: [13.5.0]
-
     steps:
       - uses: actions/checkout@v1
-      - name: Publish
-        uses: actions/setup-node@v1
+      - uses: actions/setup-node@v1
         with:
-          node-version: ${{ matrix.node-version }}
+          node-version: 13.5.0
           registry-url: https://registry.npmjs.org/
-        run: |
-          npm ci --silent
-          npm run test
-          npm run size
-          npm run build
-          npm publish --access public
+      - run: npm ci --silent
+      - run: npm run test
+      - run: npm run size
+      - run: npm run build
+      - run: npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
