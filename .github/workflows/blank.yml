@@ -13,8 +13,9 @@ jobs:
         with:
           node-version: 13.5.0
       - run: npm ci --silent
-      - run: echo //registry.npmjs.org/:_authToken=${{secrets.NPM_TOKEN}} > .npmrc
-      - run: npm run test
-      - run: npm run size
-      - run: npm run build
-      - run: npm publish
+      - run: echo //registry.npmjs.org/:_authToken=${{secrets.NPM_TOKEN}} > ~/.npmrc
+      - run: cat ~/.npmrc
+#      - run: npm run test
+#      - run: npm run size
+#      - run: npm run build
+#      - run: npm publish
