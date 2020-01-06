@@ -1,6 +1,8 @@
 name: Release
 
-on: [push]
+on:
+  release:
+    types: [published]
 
 jobs:
   build:
@@ -12,7 +14,6 @@ jobs:
           node-version: 13.5.0
       - run: npm ci --silent
       - run: echo //registry.npmjs.org/:_authToken=${{secrets.NPM_TOKEN}} > ~/.npmrc
-      - run: cat ~/.npmrc
       - run: npm run test
       - run: npm run size
       - run: npm run build
