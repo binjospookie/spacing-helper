@@ -37,7 +37,7 @@
     "build:types": "tsc && scp ./dist/index.d.ts ./build",
     "build": "rm -rf ./build && npm run build:js && npm run build:types",
     "lint": "tslint -c tslint.json 'src/**/*.ts'",
-    "prepublish": "npm run build",
+    "prepublishOnly": "npm run build",
     "prettier": "prettier --check \"src/**/*.ts\"",
     "size": "npm run build && size-limit",
     "test": "ava"
@@ -49,8 +49,8 @@
     "ava": "2.4.0",
     "esm": "3.2.25",
     "prettier": "1.19.1",
-    "rollup-plugin-terser": "5.1.3",
-    "ts-node": "8.6.0",
+    "rollup-plugin-terser": "5.2.0",
+    "ts-node": "8.6.1",
     "tslint": "5.20.1",
     "typescript": "3.7.4"
   },
