@@ -1,6 +1,6 @@
 {
   "name": "spacing-helper",
-  "version": "1.1.7",
+  "version": "1.1.7-alpha.4.8",
   "description": "Standalone helper for creating consistent spacing between the elements of your UI",
   "main": "build/index.es.js",
   "types": "build/index.d.ts",
@@ -21,6 +21,9 @@
     "build/index.es.js",
     "build/index.d.ts"
   ],
+  "publishConfig": {
+    "registry": "https://registry.npmjs.orgdf"
+  },
   "repository": {
     "type": "git",
     "url": "git@github.com:binjospookie/spacing-helper.git"
@@ -30,11 +33,11 @@
   },
   "homepage": "https://github.com/binjospookie/spacing-helper#readme",
   "scripts": {
+    "build:js": "npx rollup -c ./rollup.config.js",
     "build:types": "tsc && scp ./dist/index.d.ts ./build",
-    "build": "rm -rf ./build && npm run prepublish",
+    "build": "rm -rf ./build && npm run build:js && npm run build:types",
     "lint": "tslint -c tslint.json 'src/**/*.ts'",
-    "publish": "npm publish",
-    "prepare": "npx rollup -c ./rollup.config.js && npm run build:types",
+    "prepublish": "npm run build",
     "prettier": "prettier --check \"src/**/*.ts\"",
     "size": "npm run build && size-limit",
     "test": "ava"
