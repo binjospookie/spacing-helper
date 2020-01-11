@@ -8,6 +8,7 @@ export default {
   output: {
     file: pkg.main,
     format: 'esm',
+    comments: false
   },
   plugins: [typescript(), terser()],
 };
