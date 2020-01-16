@@ -21,6 +21,15 @@ spacing(1,2,3,4); // '8px 16px 24px 32px'
 Let's see some code
 
 ```js
+const HeaderStyled = styled.header`
+    margin: 16px 24px;
+    ...
+`;
+```
+
+Make it consistent
+
+```js
 const MODULE = 8;
 
 const HeaderStyled = styled.header`
