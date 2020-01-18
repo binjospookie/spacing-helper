@@ -1,12 +1,12 @@
 module.exports = {
   preset: 'ts-jest',
   testEnvironment: 'node',
-  "coverageThreshold": {
+  coverageThreshold: {
     "global": {
       "statements": 100
     }
   },
-  "reporters": [
+  reporters: [
     "jest-nyan-reporter"
   ]
 };
