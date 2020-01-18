@@ -40,31 +40,19 @@
     "prepublishOnly": "npm run build",
     "prettier": "prettier --check \"src/**/*.ts\"",
     "size": "npm run build && size-limit",
-    "test": "ava"
+    "test": "jest  --coverage"
   },
   "devDependencies": {
     "@arkweid/lefthook": "0.7.0",
     "@rollup/plugin-typescript": "2.1.0",
     "@size-limit/preset-small-lib": "3.0.0",
-    "ava": "2.4.0",
-    "esm": "3.2.25",
+    "@types/jest": "24.9.0",
+    "jest": "24.9.0",
     "prettier": "1.19.1",
     "rollup": "1.29.0",
     "rollup-plugin-terser": "5.2.0",
-    "ts-node": "8.6.2",
+    "ts-jest": "24.3.0",
     "tslint": "5.20.1",
     "typescript": "3.7.5"
-  },
-  "ava": {
-    "compileEnhancements": false,
-    "concurrency": 5,
-    "extensions": [
-      "ts"
-    ],
-    "failFast": true,
-    "require": [
-      "esm",
-      "ts-node/register"
-    ]
   }
 }
