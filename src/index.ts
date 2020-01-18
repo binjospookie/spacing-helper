@@ -1,4 +1,6 @@
-const multiply = (module: number, factor: number) => `${module * factor}px`;
+const transform = (spacing: number, factor: number) => `${spacing * factor}px`;
 
-export const createSpacing = (module: number = 8) => (first: number, ...rest: readonly number[]): string =>
-  rest.reduce((acc, item) => `${acc} ${multiply(module, item)}`, multiply(module, first));
+export const createSpacing = (spacing: number = 8) => (first?: number, ...data: readonly number[]) =>
+  first === undefined
+    ? transform(spacing, 1)
+    : data.reduce((acc, item) => `${acc} ${transform(spacing, item)}`, transform(spacing, first));
