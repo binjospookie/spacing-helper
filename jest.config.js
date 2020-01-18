@@ -5,5 +5,8 @@ module.exports = {
     "global": {
       "statements": 100
     }
-  }
+  },
+  "reporters": [
+    "jest-nyan-reporter"
+  ]
 };
