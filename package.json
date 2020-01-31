@@ -45,7 +45,7 @@
   "devDependencies": {
     "@arkweid/lefthook": "0.7.0",
     "@rollup/plugin-typescript": "3.0.0",
-    "@size-limit/preset-small-lib": "3.0.0",
+    "@size-limit/preset-small-lib": "3.0.1",
     "@types/jest": "25.1.1",
     "jest": "25.1.0",
     "jest-nyan-reporter": "1.0.2",
