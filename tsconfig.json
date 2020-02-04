@@ -2,7 +2,7 @@
   "compilerOptions": {
     "declaration": true,
     "module": "esnext",
-    "target": "es2017",
+    "target": "es5",
     "noImplicitAny": true,
     "resolveJsonModule": true,
     "sourceMap": false,
