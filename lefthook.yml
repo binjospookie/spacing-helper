@@ -1,3 +1,7 @@
+commit-msg:
+  scripts:
+    "template_checker":
+      runner: bash
 pre-commit:
   commands:
     prettier:
