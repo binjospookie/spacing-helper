@@ -1,8 +1,10 @@
 import { createSpacing } from '../';
 
-const spacingDefault = createSpacing();
-const spacingEight = createSpacing(8);
-const spacingFour = createSpacing(4);
+const spacingDefault = createSpacing({});
+const spacingEight = createSpacing({ factor: 8 });
+const spacingFour = createSpacing({ factor: 4 });
+const spacingRem = createSpacing({ units: 'rem' });
+const spacingFull = createSpacing({ factor: 8, units: 'rem', divisor: 100 });
 
 test('Single argument', () => {
   expect(spacingEight(2)).toBe('16px');
@@ -12,6 +14,8 @@ test('Single argument', () => {
 
   expect(spacingFour(2)).toBe('8px');
   expect(spacingFour(0.5)).toBe('2px');
+
+  expect(spacingRem(2)).toBe('16rem');
 });
 
 test('Some arguments', () => {
@@ -23,6 +27,10 @@ test('Some arguments', () => {
   expect(spacingDefault(1, 2, 3)).toBe('8px 16px 24px');
   expect(spacingDefault(1, 2, 3, 4)).toBe('8px 16px 24px 32px');
 
+  expect(spacingRem(1, 2)).toBe('8rem 16rem');
+  expect(spacingRem(1, 2, 3)).toBe('8rem 16rem 24rem');
+  expect(spacingRem(1, 2, 3, 4)).toBe('8rem 16rem 24rem 32rem');
+
   expect(spacingFour(1, 2)).toBe('4px 8px');
   expect(spacingFour(1, 2)).toBe('4px 8px');
   expect(spacingFour(1, 2, 3)).toBe('4px 8px 12px');
@@ -31,4 +39,12 @@ test('Some arguments', () => {
 
 test('Without arguments', () => {
   expect(spacingEight()).toBe('8px');
+});
+
+test('Full arguments', () => {
+  expect(spacingFull()).toBe('0.08rem');
+  expect(spacingFull(2)).toBe('0.16rem');
+  expect(spacingFull(1, 2)).toBe('0.08rem 0.16rem');
+  expect(spacingFull(1, 2, 3)).toBe('0.08rem 0.16rem 0.24rem');
+  expect(spacingFull(1, 2, 3, 4)).toBe('0.08rem 0.16rem 0.24rem 0.32rem');
 });

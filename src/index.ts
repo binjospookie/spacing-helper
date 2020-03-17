@@ -1,6 +1,22 @@
-const transform = (spacing: number, factor: number) => `${spacing * factor}px`;
+interface CreateSpacing {
+  readonly factor?: number;
+  readonly divisor?: number;
+  readonly units?: string;
+}
 
-export const createSpacing = (spacing: number = 8) => (first?: number, ...data: readonly number[]) =>
+interface Transform extends Required<CreateSpacing> {
+  readonly spacing: number;
+}
+
+const transform = ({ spacing, factor, units, divisor }: Transform) => `${(spacing * factor) / divisor}${units}`;
+
+export const createSpacing = ({ factor = 8, divisor = 1, units = 'px' }: CreateSpacing) => (
+  first?: number,
+  ...data: readonly number[]
+) =>
   first === undefined
-    ? transform(spacing, 1)
-    : data.reduce((acc, item) => `${acc} ${transform(spacing, item)}`, transform(spacing, first));
+    ? transform({ spacing: 1, factor, divisor, units })
+    : data.reduce(
+        (acc, item) => `${acc} ${transform({ spacing: item, factor, divisor, units })}`,
+        transform({ spacing: first, factor, divisor, units }),
+      );

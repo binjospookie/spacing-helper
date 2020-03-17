@@ -1,3 +1,9 @@
+export interface CreateSpacing {
+  readonly factor?: number;
+  readonly divisor?: number;
+  readonly units?: string;
+}
+
 type S0 = string;
 type S1 = string;
 type S2 = string;
@@ -11,4 +17,4 @@ export interface ISpacingFn {
   (first: number, second: number, third: number): S3;
   (first: number, second: number, third: number, fourth: number): S4;
 }
-export declare const createSpacing: (spacing?: number) => ISpacingFn;
+export declare const createSpacing: (data: CreateSpacing) => ISpacingFn;
