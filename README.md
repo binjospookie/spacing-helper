@@ -9,7 +9,7 @@ Standalone helper for creating consistent spacing between the elements of your U
 
 ```js
 import { createSpacing } from 'spacing-helper';
-const spacing = createSpacing(8); // 8 is default scaling factor
+const spacing = createSpacing({ factor: 8 }); // 8 is default scaling factor
 spacing(1,2,3,4); // '8px 16px 24px 32px'
 ```
 
@@ -58,11 +58,19 @@ const HeaderStyled = styled.header`
 
 ## More examples
 ```js
-const spacing = createSpacing(8);
+const spacing = createSpacing({ factor: 8 });
 
 expect(spacing()).toBe('8px');
 expect(spacing(2)).toBe('16px');
 expect(spacing(1, 2)).toBe('8px 16px');
 expect(spacing(1, 2, 3)).toBe('8px 16px 24px');
 expect(spacing(1, 2, 3, 4)).toBe('8px 16px 24px 32px');
+```
+
+```js
+const spacingFull = createSpacing({ factor: 8, units: 'rem', divisor: 100 });
+
+expect(spacingFull(1, 2)).toBe('0.08rem 0.16rem');
+expect(spacingFull(1, 2, 3)).toBe('0.08rem 0.16rem 0.24rem');
+expect(spacingFull(1, 2, 3, 4)).toBe('0.08rem 0.16rem 0.24rem 0.32rem');
 ```
