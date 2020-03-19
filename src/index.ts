@@ -8,7 +8,11 @@ interface Transform extends Required<CreateSpacing> {
   readonly spacing: number;
 }
 
-const transform = ({ spacing, factor, units, divisor }: Transform) => `${(spacing * factor) / divisor}${units}`;
+const transform = ({ spacing, factor, units, divisor }: Transform) => {
+  const [whole, fractional] = String((spacing * factor) / divisor).split('.');
+
+  return fractional === undefined ? `${whole}${units}` : `${whole}.${fractional.slice(0, 2)}${units}`;
+};
 
 export const createSpacing = ({ factor = 8, divisor = 1, units = 'px' }: CreateSpacing) => (
   first?: number,
