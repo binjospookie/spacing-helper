@@ -6,6 +6,7 @@ const spacingFour = createSpacing({ factor: 4 });
 const spacingRem = createSpacing({ units: 'rem' });
 const spacingFull = createSpacing({ factor: 8, units: 'rem', divisor: 100 });
 const spacing16Rem = createSpacing({ factor: 8, units: 'rem', divisor: 16 });
+const custom = createSpacing({ factor: 8, units: 'rem', divisor: 16, precision: 3 });
 
 test('Single argument', () => {
   expect(spacingEight(2)).toBe('16px');
@@ -53,4 +54,6 @@ test('Full arguments', () => {
 test('cut extra digits', () => {
   expect(spacing16Rem(1.25)).toBe('0.62rem');
   expect(spacing16Rem(1.3)).toBe('0.65rem');
+
+  expect(custom(1.25)).toBe('0.625rem');
 });
