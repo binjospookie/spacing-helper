@@ -1,6 +1,7 @@
 export interface CreateSpacing {
   readonly factor?: number;
   readonly divisor?: number;
+  readonly precision?: number;
   readonly units?: string;
 }
 

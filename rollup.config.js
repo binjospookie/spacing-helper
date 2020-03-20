@@ -7,8 +7,7 @@ export default {
   input: './src/index.ts',
   output: {
     file: pkg.main,
-    format: 'esm',
-    comments: false
+    format: 'esm'
   },
   plugins: [typescript(), terser()],
 };
