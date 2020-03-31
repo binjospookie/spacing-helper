@@ -10,7 +10,7 @@ pre-commit:
       run: npm run lint
 pre-push:
   commands:
-    audit:
-      run: npm audit
+#    audit:
+#      run: npm audit
     size:
       run: npm run size
