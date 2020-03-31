@@ -2,6 +2,7 @@
   {
     "brotli": true,
     "path": "build/index.es.js",
-    "limit": "61 B"
+    "limit": "61 B",
+    "webpack": false
   }
 ]

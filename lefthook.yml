@@ -11,4 +11,6 @@ pre-commit:
 pre-push:
   commands:
     audit:
-      rin: npm audit
+      run: npm audit
+    size:
+      run: npm run size
