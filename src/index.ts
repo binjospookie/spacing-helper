@@ -5,14 +5,12 @@ interface CreateSpacing {
   readonly units?: string;
 }
 
-const makeTransform = ({ factor, units, divisor, precision }: Required<CreateSpacing>) => (spacing: number) => {
-  const [whole, fractional] = String((spacing * factor) / divisor).split(/\./);
+const spacingRaw = (transform: ReturnType<typeof makeTransform>) => (first: number = 1, ...data: readonly number[]) =>
+  data.reduce((acc, item) => `${acc} ${transform(item)}`, transform(first));
 
-  return fractional === undefined ? `${whole}${units}` : `${whole}.${fractional.slice(0, precision)}${units}`;
-};
-
-const spacingRaw = (transform: ReturnType<typeof makeTransform>) => (first?: number, ...data: readonly number[]) =>
-  data.reduce((acc, item) => `${acc} ${transform(item)}`, transform(first || 1));
+const makeTransform = ({ factor, units, divisor, precision }: Required<CreateSpacing>) => (spacing: number) =>
+  // @ts-ignore no string cast. it's performance hack
+  `${parseInt(((spacing * factor) / divisor) * precision, 10) / precision}${units}`;
 
 export const createSpacing = ({ factor = 8, divisor = 1, precision = 2, units = 'px' }: CreateSpacing) =>
-  spacingRaw(makeTransform({ factor, divisor, precision, units }));
+  spacingRaw(makeTransform({ factor, divisor, precision: 10 ** precision, units }));
