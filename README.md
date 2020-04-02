@@ -92,3 +92,12 @@ Default: 2<br>
 Description: units of transforms result (e.g. px, rem, em)
 Type: string<br>
 Default: px<br>
+
+## Benchmarks
+```
+Legacy spacing-helper:   424,138 ops/sec
+Actual spacing-helper:   909,963 ops/sec
+
+Legacy version: 125.592ms
+Actual version: 58.592ms
+```

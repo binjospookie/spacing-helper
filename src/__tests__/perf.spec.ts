@@ -11,8 +11,7 @@ const randomDataSet = (dataSetSize: number) => new Array(dataSetSize).fill(0).ma
 const randomDatasetRandomSize = compose(randomDataSet, randomInteger);
 const heavyCalculates = () => new Array(ARRAYS_COUNT).fill([]).map(randomDatasetRandomSize);
 const displayResults = (start: number, end: number, label: string) =>
-  // tslint:disable-next-line
-  console.log(`${label} version: ${(end - start).toFixed(3)}ms`);
+  process.stdout.write(`${label} version: ${(end - start).toFixed(3)}ms\n`);
 
 const dataToTest = heavyCalculates();
 const legacySpacing = createSpacingLegacy({ factor: 8, units: 'rem', divisor: 100 });

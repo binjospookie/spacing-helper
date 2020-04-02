@@ -8,9 +8,13 @@ interface CreateSpacing {
 const spacingRaw = (transform: ReturnType<typeof makeTransform>) => (first: number = 1, ...data: readonly number[]) =>
   data.reduce((acc, item) => `${acc} ${transform(item)}`, transform(first));
 
-const makeTransform = ({ factor, units, divisor, precision }: Required<CreateSpacing>) => (spacing: number) =>
+const makeTransform = ({ units, precision, factor }: Omit<Required<CreateSpacing>, 'divisor'>) => (spacing: number) =>
   // @ts-ignore no string cast. it's performance hack
-  `${parseInt(((spacing * factor) / divisor) * precision, 10) / precision}${units}`;
+  `${parseInt(spacing * factor, 10) / precision}${units}`;
 
-export const createSpacing = ({ factor = 8, divisor = 1, precision = 2, units = 'px' }: CreateSpacing) =>
-  spacingRaw(makeTransform({ factor, divisor, precision: 10 ** precision, units }));
+export const createSpacing = ({ factor = 8, divisor = 1, precision = 2, units = 'px' }: CreateSpacing) => {
+  const parsedPrecision = 10 ** precision;
+  const factorParsed = (factor / divisor) * parsedPrecision;
+
+  return spacingRaw(makeTransform({ factor: factorParsed, precision: parsedPrecision, units }));
+};
