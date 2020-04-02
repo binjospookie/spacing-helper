@@ -1,6 +1,6 @@
 {
   "name": "spacing-helper",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "Standalone helper for creating consistent spacing between the elements of your UI",
   "source": "src/index.ts",
   "main": "build/index.es.js",

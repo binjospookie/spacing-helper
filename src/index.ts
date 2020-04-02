@@ -9,8 +9,7 @@ const spacingRaw = (transform: ReturnType<typeof makeTransform>) => (first: numb
   data.reduce((acc, item) => `${acc} ${transform(item)}`, transform(first));
 
 const makeTransform = ({ units, precision, factor }: Omit<Required<CreateSpacing>, 'divisor'>) => (spacing: number) =>
-  // @ts-ignore no string cast. it's performance hack
-  `${parseInt(spacing * factor, 10) / precision}${units}`;
+  `${((spacing * factor) | 0) / precision}${units}`;
 
 export const createSpacing = ({ factor = 8, divisor = 1, precision = 2, units = 'px' }: CreateSpacing) => {
   const parsedPrecision = 10 ** precision;

@@ -95,9 +95,9 @@ Default: px<br>
 
 ## Benchmarks
 ```
-Legacy spacing-helper:   424,138 ops/sec
-Actual spacing-helper:   909,963 ops/sec
+v2: 417,465 ops/sec
+v3: 2,240,720 ops/sec
 
-Legacy version: 125.592ms
-Actual version: 58.592ms
+v2: 125.060ms
+v3: 24.724ms
 ```

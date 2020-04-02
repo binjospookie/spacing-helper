@@ -1,3 +1,4 @@
+import { bold } from 'chalk';
 import { performance } from 'perf_hooks';
 import { compose } from 'ramda';
 
@@ -11,29 +12,29 @@ const randomDataSet = (dataSetSize: number) => new Array(dataSetSize).fill(0).ma
 const randomDatasetRandomSize = compose(randomDataSet, randomInteger);
 const heavyCalculates = () => new Array(ARRAYS_COUNT).fill([]).map(randomDatasetRandomSize);
 const displayResults = (start: number, end: number, label: string) =>
-  process.stdout.write(`${label} version: ${(end - start).toFixed(3)}ms\n`);
+  process.stdout.write(`${label}: ${bold((end - start).toFixed(3))}ms\n`);
 
 const dataToTest = heavyCalculates();
 const legacySpacing = createSpacingLegacy({ factor: 8, units: 'rem', divisor: 100 });
 const spacing = createSpacing({ factor: 8, units: 'rem', divisor: 100 });
 
 describe('Performance test', () => {
-  test('legacy spacing-helper', () => {
+  test('v2', () => {
     const startTime = performance.now();
 
     dataToTest.forEach((array) => legacySpacing(...array));
 
     const endTime = performance.now();
 
-    displayResults(startTime, endTime, 'Legacy');
+    displayResults(startTime, endTime, 'v2');
   });
-  test('actual spacing-helper', () => {
+  test('v3', () => {
     const startTime = performance.now();
 
     dataToTest.forEach((array) => spacing(...array));
 
     const endTime = performance.now();
 
-    displayResults(startTime, endTime, 'Actual');
+    displayResults(startTime, endTime, 'v3');
   });
 });

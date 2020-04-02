@@ -16,10 +16,10 @@ const formatNumber = (x: number) =>
 
 test('Operations per second', () => {
   suite
-    .add('Legacy spacing-helper', () => {
+    .add('v2', () => {
       legacySpacing(1, 2, 3, 4);
     })
-    .add('Actual spacing-helper', () => {
+    .add('v3', () => {
       spacing(1, 2, 3, 4);
     })
     // tslint:disable-next-line

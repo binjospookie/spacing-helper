@@ -12,7 +12,8 @@
     "no-empty": false,
     "no-any": true,
     "unnecessary-constructor": true,
-    "no-default-export": true
+    "no-default-export": true,
+    "no-bitwise": false
   },
   "rulesDirectory": []
 }
