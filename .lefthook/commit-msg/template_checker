@@ -1,6 +1,6 @@
 INPUT_FILE=$1
 START_LINE=`head -n1 $INPUT_FILE`
-PATTERN="^(build|ci|docs|feat|fix|perf|refactor|revert|style|test)+: "
+PATTERN="^(build|ci|chore|docs|feat|fix|perf|refactor|revert|style|test)+: "
 if ! [[ "$START_LINE" =~ $PATTERN ]]; then
   echo -e "Invalid commit message.\nCommit message must start with '(build|ci|docs|feat|fix|perf|refactor|revert|style|test):'"
   exit 1
