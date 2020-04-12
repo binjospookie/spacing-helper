@@ -1,7 +1,6 @@
 # Spacing-helper
 ![Typed with TypeScript](https://flat.badgen.net/badge/icon/Typed?icon=typescript&label&labelColor=blue&color=555555)
 ![Version](https://badgen.net/npm/v/spacing-helper)
-![Size](https://badgen.net/bundlephobia/minzip/spacing-helper)
 ![CI](https://github.com/binjospookie/spacing-helper/workflows/Build/badge.svg)
 
 
