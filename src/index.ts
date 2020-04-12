@@ -5,11 +5,11 @@ interface CreateSpacing {
   readonly units?: string;
 }
 
-const spacingRaw = (transform: ReturnType<typeof makeTransform>) => (first: number = 1, ...data: readonly number[]) =>
-  data.reduce((acc, item) => `${acc} ${transform(item)}`, transform(first));
-
 const makeTransform = ({ units, precision, factor }: Omit<Required<CreateSpacing>, 'divisor'>) => (spacing: number) =>
   `${((spacing * factor) | 0) / precision}${units}`;
+
+const spacingRaw = (transform: ReturnType<typeof makeTransform>) => (first: number = 1, ...data: readonly number[]) =>
+  data.reduce((acc, item) => `${acc} ${transform(item)}`, transform(first));
 
 export const createSpacing = ({ factor = 8, divisor = 1, precision = 2, units = 'px' }: CreateSpacing) => {
   const parsedPrecision = 10 ** precision;
