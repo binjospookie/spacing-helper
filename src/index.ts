@@ -6,7 +6,7 @@ interface CreateSpacing {
 }
 
 const makeTransform = ({ units, precision, factor }: Omit<Required<CreateSpacing>, 'divisor'>) => (spacing: number) =>
-  `${((spacing * factor) | 0) / precision}${units}`;
+  `${~~(spacing * factor) / precision}${units}`;
 
 const spacingRaw = (transform: ReturnType<typeof makeTransform>) => (first: number = 1, ...data: readonly number[]) =>
   data.reduce((acc, item) => `${acc} ${transform(item)}`, transform(first));
