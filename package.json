@@ -51,7 +51,7 @@
     "benchmark": "2.1.4",
     "chalk": "4.0.0",
     "jest": "25.5.4",
-    "microbundle": "0.11.0",
+    "microbundle": "0.12.0",
     "prettier": "2.0.5",
     "ramda": "^0.27.0",
     "size-limit": "4.4.5",
