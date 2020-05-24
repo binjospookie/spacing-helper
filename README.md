@@ -4,7 +4,7 @@
 ![CI](https://github.com/binjospookie/spacing-helper/workflows/Build/badge.svg)
 
 
-A tiny (91 bytes) and blazing fast standalone helper for creating consistent spacing between the elements of your UI.
+A tiny (127 bytes) and blazing fast standalone helper for creating consistent spacing between the elements of your UI.
 
 ```js
 import { createSpacing } from 'spacing-helper';
@@ -94,9 +94,9 @@ Default: px<br>
 
 ## Benchmarks
 ```
-v2: 417,465 ops/sec
 v3: 2,240,720 ops/sec
+v4: 14,362,725 ops/sec
 
-v2: 125.060ms
 v3: 24.724ms
+v4: 12.814ms
 ```

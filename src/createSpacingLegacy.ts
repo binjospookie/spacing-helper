@@ -5,23 +5,12 @@ interface CreateSpacing {
   readonly units?: string;
 }
 
-interface Transform extends Required<CreateSpacing> {
-  readonly spacing: number;
-}
+export const createSpacingLegacy = ({ factor = 8, divisor = 1, precision = 2, units = 'px' }: CreateSpacing) => {
+  const parsedPrecision = 10 ** precision;
+  const factorParsed = (factor / divisor) * parsedPrecision;
 
-const transform = ({ spacing, factor, units, divisor, precision }: Transform) => {
-  const [whole, fractional] = String((spacing * factor) / divisor).split('.');
+  const transform = (spacing: number) => `${~~(spacing * factorParsed) / parsedPrecision}${units}`;
 
-  return fractional === undefined ? `${whole}${units}` : `${whole}.${fractional.slice(0, precision)}${units}`;
+  return (first: number = 1, ...data: readonly number[]) =>
+    data.reduce((acc, item) => `${acc} ${transform(item)}`, transform(first));
 };
-
-export const createSpacingLegacy = ({ factor = 8, divisor = 1, precision = 2, units = 'px' }: CreateSpacing) => (
-  first?: number,
-  ...data: readonly number[]
-) =>
-  first === undefined
-    ? transform({ spacing: 1, factor, divisor, precision, units })
-    : data.reduce(
-        (acc, item) => `${acc} ${transform({ spacing: item, factor, divisor, precision, units })}`,
-        transform({ spacing: first, factor, divisor, precision, units }),
-      );
