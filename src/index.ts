@@ -1,9 +1,4 @@
-interface CreateSpacing {
-  readonly factor?: number;
-  readonly divisor?: number;
-  readonly precision?: number;
-  readonly units?: string;
-}
+import type { CreateSpacing } from './types';
 
 export const createSpacing = ({ factor = 8, divisor = 1, precision = 2, units = 'px' }: CreateSpacing) => {
   const parsedPrecision = 10 ** precision;

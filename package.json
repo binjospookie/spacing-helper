@@ -35,7 +35,7 @@
   "homepage": "https://github.com/binjospookie/spacing-helper#readme",
   "scripts": {
     "build:js": "microbundle --compress --no-sourcemap --no-raw",
-    "build:types": "scp src/index.d.ts ./build",
+    "build:types": "cp src/types.ts ./build/index.d.ts",
     "build": "rm -rf ./build && npm run build:js && npm run build:types",
     "lint": "tslint -c tslint.json 'src/**/*.ts'",
     "prepublishOnly": "npm run build",
