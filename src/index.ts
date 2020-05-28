@@ -11,9 +11,9 @@ export const createSpacing = ({ factor = 8, divisor = 1, precision = 2, units = 
       return valueFromCache;
     }
 
-    const result = `${~~(spacing * factorParsed) / parsedPrecision}${units}`;
-    cache.set(spacing, result);
-    return result;
+    const valueToCache = `${~~(spacing * factorParsed) / parsedPrecision}${units}`;
+    cache.set(spacing, valueToCache);
+    return valueToCache;
   };
 
   return (first: number = 1, ...data: readonly number[]) =>
