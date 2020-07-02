@@ -47,7 +47,7 @@
     "@arkweid/lefthook": "0.7.2",
     "@size-limit/preset-small-lib": "4.5.0",
     "@types/jest": "26.0.3",
-    "@types/ramda": "0.27.6",
+    "@types/ramda": "0.27.7",
     "benchmark": "2.1.4",
     "chalk": "4.1.0",
     "jest": "26.1.0",
