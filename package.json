@@ -50,7 +50,7 @@
     "@types/ramda": "0.27.13",
     "benchmark": "2.1.4",
     "chalk": "4.1.0",
-    "jest": "26.1.0",
+    "jest": "26.2.1",
     "microbundle": "0.12.3",
     "prettier": "2.0.5",
     "ramda": "^0.27.0",
