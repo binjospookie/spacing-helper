@@ -80,15 +80,15 @@ Description: scaling factor<br>
 Type: number<br>
 Default: 8<br>
 ### divisor
-Description: divisor for multiplication result of spacing and factor
+Description: divisor for multiplication result of spacing and factor<br>
 Type: number<br>
 Default: 1<br>
 ### precision
-Description: precision of divisions
+Description: precision of divisions<br>
 Type: number<br>
 Default: 2<br>
 ### units
-Description: units of transforms result (e.g. px, rem, em)
+Description: units of transforms result (e.g. px, rem, em)<br>
 Type: string<br>
 Default: px<br>
 
