@@ -16,6 +16,6 @@ export const createSpacing = ({ factor = 8, divisor = 1, precision = 2, units = 
     return valueToCache;
   };
 
-  return (first: number = 1, ...data: readonly number[]) =>
+  return (first = 1, ...data: readonly number[]) =>
     data.reduce((acc, item) => `${acc} ${transform(item)}`, transform(first));
 };
