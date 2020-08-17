@@ -1,6 +1,4 @@
-import { bold } from 'chalk';
 import { performance } from 'perf_hooks';
-import { compose } from 'ramda';
 
 import { createSpacing } from '../index';
 import { createSpacingLegacy } from '../createSpacingLegacy';
@@ -9,10 +7,10 @@ const ARRAYS_COUNT = 100000;
 
 const randomInteger = () => Math.floor(Math.random() * 5);
 const randomDataSet = (dataSetSize: number) => new Array(dataSetSize).fill(0).map(randomInteger);
-const randomDatasetRandomSize = compose(randomDataSet, randomInteger);
+const randomDatasetRandomSize = () => randomDataSet(randomInteger());
 const heavyCalculates = () => new Array(ARRAYS_COUNT).fill([]).map(randomDatasetRandomSize);
 const displayResults = (start: number, end: number, label: string) =>
-  process.stdout.write(`${label}: ${bold((end - start).toFixed(3))}ms\n`);
+  process.stdout.write(`${label}: ${(end - start).toFixed(3)}ms\n`);
 
 const dataToTest = heavyCalculates();
 const legacySpacing = createSpacingLegacy({ factor: 8, units: 'rem', divisor: 100 });

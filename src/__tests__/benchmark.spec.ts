@@ -1,6 +1,5 @@
 // @ts-ignore
 import * as benchmarkSpec from 'benchmark';
-import { bold } from 'chalk';
 
 import { createSpacing } from '../index';
 import { createSpacingLegacy } from '../createSpacingLegacy';
@@ -27,7 +26,7 @@ test('Operations per second', () => {
       const { name, hz } = event.target;
       const hzParsed = formatNumber(hz.toFixed(0)).padStart(9);
 
-      process.stdout.write(`${name}: ${bold(hzParsed)} ops/sec\n`);
+      process.stdout.write(`${name}: ${hzParsed} ops/sec\n`);
     })
     .run();
 });
