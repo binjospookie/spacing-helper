@@ -41,7 +41,7 @@
     "prepublishOnly": "npm run build",
     "prettier": "prettier --check 'src/index.ts'",
     "size": "npm run build && size-limit",
-    "test": "jest  --coverage"
+    "test": "jest --coverage --no-cache"
   },
   "devDependencies": {
     "@arkweid/lefthook": "0.7.2",

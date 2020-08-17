@@ -21,7 +21,6 @@ test('Operations per second', () => {
     .add('v3', () => {
       spacing(1, 2, 3, 4);
     })
-    // tslint:disable-next-line
     .on('cycle', (event: any) => {
       const { name, hz } = event.target;
       const hzParsed = formatNumber(hz.toFixed(0)).padStart(9);
