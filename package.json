@@ -35,8 +35,8 @@
   "homepage": "https://github.com/binjospookie/spacing-helper#readme",
   "scripts": {
     "build:js": "microbundle --compress --no-sourcemap --no-raw",
-    "build:types": "cp src/index.d.ts ./build/index.d.ts",
-    "build": "rm -rf ./build && yarn run build:js && yarn run build:types",
+    "copy:types": "cp src/index.d.ts ./build/index.d.ts",
+    "build": "rm -rf ./build && yarn run build:js && yarn run copy:types",
     "lint": "eslint 'src/index.js'",
     "prepublishOnly": "yarn run build",
     "prettier": "prettier --check 'src/index.js'",
