@@ -3,7 +3,7 @@
 ![Version](https://badgen.net/npm/v/spacing-helper)
 
 
-A tiny (127 bytes) and blazing fast standalone helper for creating consistent spacing between the elements of your UI.
+A tiny (120 bytes) and blazing fast standalone helper for creating consistent spacing between the elements of your UI.
 
 ```js
 import { createSpacing } from 'spacing-helper';
