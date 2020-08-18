@@ -75,22 +75,13 @@ expect(spacingFull(1, 2, 3, 4)).toBe('0.08rem 0.16rem 0.24rem 0.32rem');
 ```
 
 ## API
-### factor
-Description: scaling factor<br>
-Type: number<br>
-Default: 8<br>
-### divisor
-Description: divisor for multiplication result of spacing and factor<br>
-Type: number<br>
-Default: 1<br>
-### precision
-Description: precision of divisions<br>
-Type: number<br>
-Default: 2<br>
-### units
-Description: units of transforms result (e.g. px, rem, em)<br>
-Type: string<br>
-Default: px<br>
+
+Name | Type | Default | Description |
+------ | ------ | ------ | -----|
+`divisor` | number | 1 | divisor for multiplication result of spacing and factor |
+`factor` | number | 8 | scaling factor |
+`precision` | number | 2 | precision of divisions |
+`units` | string | "px" | units of transforms result (e.g. px, rem, em) |
 
 ## Benchmarks
 ```
