@@ -1,11 +1,9 @@
-import type { CreateSpacing } from './types';
-
-export const createSpacing = ({ factor = 8, divisor = 1, precision = 2, units = 'px' }: CreateSpacing) => {
+export const createSpacing = ({ factor = 8, divisor = 1, precision = 2, units = 'px' }) => {
   const parsedPrecision = 10 ** precision;
   const factorParsed = (factor / divisor) * parsedPrecision;
-  const cache = new Map<number, string>();
+  const cache = new Map();
 
-  const transform = (spacing: number) => {
+  const transform = (spacing) => {
     const valueFromCache = cache.get(spacing);
     if (valueFromCache) {
       return valueFromCache;
@@ -17,7 +15,7 @@ export const createSpacing = ({ factor = 8, divisor = 1, precision = 2, units = 
   };
 
   // yes, it's faster than reduce
-  return (first = 1, second?: number, third?: number, fourth?: number) => {
+  return (first = 1, second, third, fourth) => {
     let res = transform(first);
 
     if (!second) {

@@ -2,7 +2,7 @@
   "name": "spacing-helper",
   "version": "4.1.0",
   "description": "Standalone helper for creating consistent spacing between the elements of your UI",
-  "source": "src/index.ts",
+  "source": "src/index.js",
   "main": "build/index.js",
   "module": "build/index.module.js",
   "types": "build/index.d.ts",
@@ -37,28 +37,20 @@
     "build:js": "microbundle --compress --no-sourcemap --no-raw",
     "build:types": "cp src/types.ts ./build/index.d.ts",
     "build": "rm -rf ./build && yarn run build:js && yarn run build:types",
-    "lint": "eslint 'src/index.ts'",
+    "lint": "eslint 'src/index.js'",
     "prepublishOnly": "yarn run build",
-    "prettier": "prettier --check 'src/index.ts'",
+    "prettier": "prettier --check 'src/index.js'",
     "size": "yarn run build && size-limit",
     "test": "jest --coverage --no-cache"
   },
   "devDependencies": {
     "@arkweid/lefthook": "0.7.2",
     "@size-limit/preset-small-lib": "4.5.6",
-    "@types/jest": "26.0.10",
-    "@typescript-eslint/eslint-plugin": "3.9.1",
-    "@typescript-eslint/parser": "3.9.1",
     "benchmark": "2.1.4",
     "eslint": "7.7.0",
-    "eslint-config-prettier": "6.11.0",
-    "eslint-plugin-import": "2.22.0",
-    "eslint-plugin-prefer-arrow": "1.2.2",
     "jest": "26.4.0",
     "microbundle": "0.12.3",
     "prettier": "2.0.5",
-    "size-limit": "4.5.6",
-    "tslint": "6.1.3",
-    "typescript": "3.9.7"
+    "size-limit": "4.5.6"
   }
 }
