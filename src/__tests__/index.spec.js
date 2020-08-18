@@ -1,4 +1,4 @@
-import { createSpacing } from '../';
+const { createSpacing } = require('../../build/index')
 
 const spacingDefault = createSpacing({});
 const spacingEight = createSpacing({ factor: 8 });

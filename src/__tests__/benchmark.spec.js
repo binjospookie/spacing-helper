@@ -1,12 +1,10 @@
-// @ts-ignore
-import * as benchmarkSpec from 'benchmark';
-
-import { createSpacing } from '../index';
+const benchmarkSpec = require('benchmark');
+const { createSpacing } = require('../../build/index');
 
 const suite = new benchmarkSpec.Suite();
 const spacing = createSpacing({ factor: 8, units: 'rem', divisor: 100 });
 
-const formatNumber = (x: number) =>
+const formatNumber = (x) =>
   String(x)
     .replace(/\d{3}$/, ',$&')
     .replace(/^(\d)(\d{3})/, '$1,$2');
@@ -16,7 +14,7 @@ test('Operations per second', () => {
     .add('v3', () => {
       spacing(1, 2, 3, 4);
     })
-    .on('cycle', (event: any) => {
+    .on('cycle', (event) => {
       const { name, hz } = event.target;
       const hzParsed = formatNumber(hz.toFixed(0)).padStart(9);
 

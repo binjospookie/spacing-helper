@@ -13,7 +13,7 @@ spacing(1,2,3,4); // '8px 16px 24px 32px'
 ```
 
 ## Installation
-`npm i spacing-helper`
+`npm i spacing-helper` or `yarn add spacing-helper`
 
 ## Motivation
 
@@ -84,10 +84,8 @@ Name | Type | Default | Description |
 `units` | string | "px" | units of transforms result (e.g. px, rem, em) |
 
 ## Benchmarks
-```
-v3: 2,240,720 ops/sec
-v4: 14,362,725 ops/sec
+Version | ops/sec |
+------ | ------ |
+`v3` | 2,240,720 |
+`v4.x` | 26,891,052 |
 
-v3: 24.724ms
-v4: 12.814ms
-```

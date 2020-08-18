@@ -1,6 +1,6 @@
 {
   "name": "spacing-helper",
-  "version": "4.0.0",
+  "version": "4.1.0",
   "description": "Standalone helper for creating consistent spacing between the elements of your UI",
   "source": "src/index.ts",
   "main": "build/index.js",
@@ -23,7 +23,7 @@
     "build"
   ],
   "publishConfig": {
-    "registry": "https://registry.yarnjs.org"
+    "registry": "https://registry.npmjs.org"
   },
   "repository": {
     "type": "git",
@@ -58,7 +58,6 @@
     "microbundle": "0.12.3",
     "prettier": "2.0.5",
     "size-limit": "4.5.6",
-    "ts-jest": "26.2.0",
     "tslint": "6.1.3",
     "typescript": "3.9.7"
   }

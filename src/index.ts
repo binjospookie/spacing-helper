@@ -16,6 +16,22 @@ export const createSpacing = ({ factor = 8, divisor = 1, precision = 2, units = 
     return valueToCache;
   };
 
-  return (first = 1, ...data: readonly number[]) =>
-    data.reduce((acc, item) => `${acc} ${transform(item)}`, transform(first));
+  // yes, it's faster than reduce
+  return (first = 1, second?: number, third?: number, fourth?: number) => {
+    let res = transform(first);
+
+    if (!second) {
+      return res;
+    }
+
+    res = `${res} ${transform(second)}`;
+
+    if (!third) {
+      return res;
+    }
+
+    res = `${res} ${transform(third)}`;
+
+    return fourth ? `${res} ${transform(fourth)}` : res;
+  };
 };
