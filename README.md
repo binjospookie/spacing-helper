@@ -1,7 +1,4 @@
 # Spacing-helper
-![Typed with TypeScript](https://flat.badgen.net/badge/icon/Typed?icon=typescript&label&labelColor=blue&color=555555)
-![Version](https://badgen.net/npm/v/spacing-helper)
-
 
 A tiny (120 bytes) and blazing fast standalone helper for creating consistent spacing between the elements of your UI.
 
