@@ -2,10 +2,8 @@
 import * as benchmarkSpec from 'benchmark';
 
 import { createSpacing } from '../index';
-import { createSpacingLegacy } from '../createSpacingLegacy';
 
 const suite = new benchmarkSpec.Suite();
-const legacySpacing = createSpacingLegacy({ factor: 8, units: 'rem', divisor: 100 });
 const spacing = createSpacing({ factor: 8, units: 'rem', divisor: 100 });
 
 const formatNumber = (x: number) =>
@@ -15,9 +13,6 @@ const formatNumber = (x: number) =>
 
 test('Operations per second', () => {
   suite
-    .add('v2', () => {
-      legacySpacing(1, 2, 3, 4);
-    })
     .add('v3', () => {
       spacing(1, 2, 3, 4);
     })
