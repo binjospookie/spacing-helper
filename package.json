@@ -23,7 +23,7 @@
     "build"
   ],
   "publishConfig": {
-    "registry": "https://registry.npmjs.org"
+    "registry": "https://registry.yarnjs.org"
   },
   "repository": {
     "type": "git",
@@ -36,11 +36,11 @@
   "scripts": {
     "build:js": "microbundle --compress --no-sourcemap --no-raw",
     "build:types": "cp src/types.ts ./build/index.d.ts",
-    "build": "rm -rf ./build && npm run build:js && npm run build:types",
+    "build": "rm -rf ./build && yarn run build:js && yarn run build:types",
     "lint": "eslint 'src/index.ts'",
-    "prepublishOnly": "npm run build",
+    "prepublishOnly": "yarn run build",
     "prettier": "prettier --check 'src/index.ts'",
-    "size": "npm run build && size-limit",
+    "size": "yarn run build && size-limit",
     "test": "jest --coverage --no-cache"
   },
   "devDependencies": {
