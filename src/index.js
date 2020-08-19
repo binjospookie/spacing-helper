@@ -18,13 +18,13 @@ export const createSpacing = ({ factor = 8, divisor = 1, precision = 2, units = 
   return (first = 1, second, third, fourth) => {
     let res = transform(first);
 
-    if (!second) {
+    if (typeof second !== 'number') {
       return res;
     }
 
     res = `${res} ${transform(second)}`;
 
-    if (!third) {
+    if (typeof third !== 'number') {
       return res;
     }
 

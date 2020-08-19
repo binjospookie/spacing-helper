@@ -23,6 +23,7 @@ describe('Common tests', () => {
 
   test('Some arguments', () => {
     expect(spacingEight(1, 2)).toBe('8px 16px');
+    expect(spacingEight(1, 0)).toBe('8px 0px');
     expect(spacingEight(1, 2, 3)).toBe('8px 16px 24px');
     expect(spacingEight(1, 2, 3, 4)).toBe('8px 16px 24px 32px');
 
