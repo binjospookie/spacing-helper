@@ -45,12 +45,12 @@
   },
   "devDependencies": {
     "@arkweid/lefthook": "0.7.2",
-    "@size-limit/preset-small-lib": "4.5.7",
+    "@size-limit/preset-small-lib": "4.6.0",
     "benchmark": "2.1.4",
     "eslint": "7.8.1",
     "jest": "26.4.2",
     "microbundle": "0.12.3",
     "prettier": "2.1.1",
-    "size-limit": "4.5.7"
+    "size-limit": "4.6.0"
   }
 }
