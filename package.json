@@ -47,7 +47,7 @@
     "@arkweid/lefthook": "0.7.2",
     "@size-limit/preset-small-lib": "4.6.0",
     "benchmark": "2.1.4",
-    "eslint": "7.10.0",
+    "eslint": "7.11.0",
     "jest": "26.5.2",
     "microbundle": "0.12.4",
     "prettier": "2.1.2",
