@@ -30,6 +30,6 @@ export const createSpacing = ({ factor = 8, divisor = 1, precision = 2, units = 
 
     res = `${res} ${transform(third)}`;
 
-    return fourth ? `${res} ${transform(fourth)}` : res;
+    return fourth * 0 !== 0 ? res : `${res} ${transform(fourth)}`;
   };
 };

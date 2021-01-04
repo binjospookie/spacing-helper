@@ -1,6 +1,6 @@
 # Spacing-helper
 
-A tiny (122 bytes) and blazing fast standalone helper for creating consistent spacing between the elements of your UI.
+A tiny (117 bytes) and blazing fast standalone helper for creating consistent spacing between the elements of your UI.
 
 ```js
 import { createSpacing } from 'spacing-helper';

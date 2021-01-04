@@ -39,6 +39,8 @@ describe('Common tests', () => {
     expect(spacingFour(1, 2)).toBe('4px 8px');
     expect(spacingFour(1, 2, 3)).toBe('4px 8px 12px');
     expect(spacingFour(1, 2, 3, 4)).toBe('4px 8px 12px 16px');
+
+    expect(spacingFour(1, 2, 3, 0)).toBe('4px 8px 12px 0px');
   });
 
   test('Without arguments', () => {
