@@ -37,6 +37,7 @@
     "build:js": "microbundle --compress --no-sourcemap --no-raw",
     "copy:types": "cp src/index.d.ts ./build/index.d.ts",
     "build": "rm -rf ./build && yarn run build:js && yarn run copy:types",
+    "ci:test": "jest src/__tests__/index.spec.js --coverage",
     "lint": "eslint 'src/index.js'",
     "prepublishOnly": "yarn run build",
     "prettier": "prettier --check 'src/index.js'",

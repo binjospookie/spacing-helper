@@ -17,4 +17,4 @@ jobs:
       - uses: actions/checkout@v2
       - run: yarn
       - run: yarn run build
-      - run: node ../../src/__tests__/index.spec.ts --coverage
+      - run: yarn run ci:test
