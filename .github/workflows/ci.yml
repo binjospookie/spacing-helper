@@ -9,8 +9,9 @@ on:
 
 jobs:
   build:
-
-    runs-on: 14.15.3-alpine3.10
+    runs-on: ubuntu-latest
+    container:
+      image: 'node:12.16.1-alpine3.9'
 
     steps:
       - uses: actions/checkout@v2
