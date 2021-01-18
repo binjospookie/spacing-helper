@@ -34,6 +34,7 @@
   },
   "homepage": "https://github.com/binjospookie/spacing-helper#readme",
   "scripts": {
+    "benchmark": "node ./src/benchmark.js",
     "build:js": "microbundle --compress --no-sourcemap --no-raw",
     "copy:types": "cp src/index.d.ts ./build/index.d.ts",
     "build": "rm -rf ./build && yarn run build:js && yarn run copy:types",
@@ -47,7 +48,7 @@
   "devDependencies": {
     "@arkweid/lefthook": "0.7.2",
     "@size-limit/preset-small-lib": "4.9.1",
-    "benchmark": "2.1.4",
+    "benny": "3.6.15",
     "eslint": "7.18.0",
     "jest": "26.6.3",
     "microbundle": "0.13.0",
