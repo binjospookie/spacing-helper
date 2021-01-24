@@ -34,7 +34,7 @@
   },
   "homepage": "https://github.com/binjospookie/spacing-helper#readme",
   "scripts": {
-    "benchmark": "node ./src/benchmark.js",
+    "benchmark": "yarn run build && node ./src/benchmark.js",
     "build:js": "microbundle --compress --no-sourcemap --no-raw",
     "copy:types": "cp src/index.d.ts ./build/index.d.ts",
     "build": "rm -rf ./build && yarn run build:js && yarn run copy:types",
