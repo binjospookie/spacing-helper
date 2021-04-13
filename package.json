@@ -47,12 +47,12 @@
   },
   "devDependencies": {
     "@arkweid/lefthook": "0.7.2",
-    "@size-limit/preset-small-lib": "4.10.1",
+    "@size-limit/preset-small-lib": "4.10.2",
     "benny": "3.6.15",
-    "eslint": "7.23.0",
+    "eslint": "7.24.0",
     "jest": "26.6.3",
     "microbundle": "0.13.0",
     "prettier": "2.2.1",
-    "size-limit": "4.10.1"
+    "size-limit": "4.10.2"
   }
 }
