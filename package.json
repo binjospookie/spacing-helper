@@ -51,7 +51,7 @@
     "benny": "3.6.15",
     "eslint": "7.27.0",
     "jest": "27.0.1",
-    "microbundle": "0.13.0",
+    "microbundle": "0.13.1",
     "prettier": "2.3.0",
     "size-limit": "4.11.0"
   }
