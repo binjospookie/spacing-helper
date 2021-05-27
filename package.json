@@ -39,7 +39,6 @@
     "copy:types": "cp src/index.d.ts ./build/index.d.ts",
     "build": "rm -rf ./build && yarn run build:js && yarn run copy:types",
     "ci:test": "jest src/__tests__/index.spec.js --coverage",
-    "lint": "eslint 'src/index.js'",
     "prepublishOnly": "yarn run build",
     "prettier": "prettier --check 'src/index.js'",
     "size": "yarn run build && size-limit --silent",
@@ -49,9 +48,8 @@
     "@arkweid/lefthook": "0.7.5",
     "@size-limit/preset-small-lib": "4.11.0",
     "benny": "3.6.15",
-    "eslint": "7.27.0",
     "jest": "27.0.1",
-    "microbundle": "0.13.0",
+    "microbundle": "0.13.1",
     "prettier": "2.3.0",
     "size-limit": "4.11.0"
   }
