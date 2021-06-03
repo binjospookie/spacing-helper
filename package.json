@@ -45,7 +45,7 @@
     "test": "jest --coverage --no-cache"
   },
   "devDependencies": {
-    "@arkweid/lefthook": "0.7.5",
+    "@arkweid/lefthook": "0.7.6",
     "@size-limit/preset-small-lib": "4.11.0",
     "benny": "3.6.15",
     "jest": "27.0.3",
