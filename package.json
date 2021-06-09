@@ -39,7 +39,6 @@
     "build:js": "terser --compress --comments=false --mangle --module --output ./build/index.js  -- ./src/index.js ",
     "copy:types": "cp src/index.d.ts ./build/index.d.ts",
     "build": "rm -rf ./build && mkdir ./build && yarn run build:js && yarn run copy:types",
-    "ci:test": "jest src/__tests__/index.spec.js --coverage",
     "prepublishOnly": "yarn run build",
     "prettier": "prettier --check 'src/index.js'",
     "test": "NODE_OPTIONS=--experimental-vm-modules npx jest --coverage --no-cache"
