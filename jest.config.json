@@ -4,5 +4,6 @@
     "global": {
       "statements": 100
     }
-  }
+  },
+  "transform": {}
 }

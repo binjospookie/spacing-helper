@@ -1,7 +1,0 @@
-[
-  {
-    "brotli": true,
-    "path": "build/index.js",
-    "limit": "117 B"
-  }
-]

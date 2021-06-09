@@ -4,8 +4,9 @@
   "description": "Standalone helper for creating consistent spacing between the elements of your UI",
   "source": "src/index.js",
   "main": "build/index.js",
-  "module": "build/index.module.js",
+  "module": "build/index.js",
   "types": "build/index.d.ts",
+  "type": "module",
   "license": "MIT",
   "author": "Viktor Pasynok",
   "email": "binjospookie@gmail.com",
@@ -34,23 +35,17 @@
   },
   "homepage": "https://github.com/binjospookie/spacing-helper#readme",
   "scripts": {
-    "benchmark": "yarn run build && node ./src/benchmark.js",
-    "build:js": "microbundle --compress --no-sourcemap --no-raw",
+    "benchmark": "NODE_OPTIONS=--experimental-vm-modules yarn run build && node ./src/benchmark.js",
+    "build:js": "terser --compress --comments=false --mangle --module --output ./build/index.js  -- ./src/index.js ",
     "copy:types": "cp src/index.d.ts ./build/index.d.ts",
     "build": "rm -rf ./build && yarn run build:js && yarn run copy:types",
     "ci:test": "jest src/__tests__/index.spec.js --coverage",
     "prepublishOnly": "yarn run build",
     "prettier": "prettier --check 'src/index.js'",
-    "size": "yarn run build && size-limit --silent",
-    "test": "jest --coverage --no-cache"
+    "test": "NODE_OPTIONS=--experimental-vm-modules npx jest --coverage --no-cache"
   },
   "devDependencies": {
-    "@arkweid/lefthook": "0.7.6",
-    "@size-limit/preset-small-lib": "4.12.0",
-    "benny": "3.6.15",
     "jest": "27.0.4",
-    "microbundle": "0.13.2",
-    "prettier": "2.3.1",
-    "size-limit": "4.12.0"
+    "terser": "^5.7.0"
   }
 }

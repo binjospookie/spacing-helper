@@ -1,4 +1,4 @@
-export const createSpacing = ({ factor = 8, divisor = 1, precision = 2, units = 'px' }) => {
+const createSpacing = ({ factor = 8, divisor = 1, precision = 2, units = 'px' }) => {
   const parsedPrecision = 10 ** precision;
   const factorParsed = (factor / divisor) * parsedPrecision;
   const cache = new Map();
@@ -33,3 +33,5 @@ export const createSpacing = ({ factor = 8, divisor = 1, precision = 2, units = 
     return fourth * 0 !== 0 ? res : `${res} ${transform(fourth)}`;
   };
 };
+
+export { createSpacing };
