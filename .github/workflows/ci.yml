@@ -14,7 +14,13 @@ jobs:
       image: 'node:14.15.3-alpine3.10'
 
     steps:
-      - uses: actions/checkout@v2
-      - run: yarn
-      - run: yarn run build
+      - name: Checkouut
+        uses: actions/checkout@v2
+        
+      - name: Install and build  
+        run: |
+          yarn
+          yarn run build
+     
+      - name: Run tests
       - run: yarn run test
