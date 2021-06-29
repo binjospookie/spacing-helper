@@ -42,7 +42,7 @@
     "test": "NODE_OPTIONS=--experimental-vm-modules npx jest --coverage --no-cache"
   },
   "devDependencies": {
-    "jest": "27.0.5",
+    "jest": "27.0.6",
     "terser": "^5.7.0"
   }
 }
