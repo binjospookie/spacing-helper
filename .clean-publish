@@ -1,0 +1,11 @@
+{
+  "files": [
+    ".vscode",
+    ".github",
+    ".yarnclean",
+    "jest.config.json"
+  ],
+  "fields": ["devDependencies", "scripts"],
+  "packageManager": "yarn",
+  "access": "public"
+}

@@ -39,9 +39,11 @@
     "copy:types": "cp src/index.d.ts ./build/index.d.ts",
     "build": "rm -rf ./build && mkdir ./build && yarn run build:js && yarn run copy:types",
     "prepublishOnly": "yarn run build",
-    "test": "NODE_OPTIONS=--experimental-vm-modules npx jest --coverage --no-cache"
+    "test": "NODE_OPTIONS=--experimental-vm-modules npx jest --coverage --no-cache",
+    "clean-publish": "clean-publish"
   },
   "devDependencies": {
+    "clean-publish": "^2.2.0",
     "jest": "27.0.6",
     "terser": "^5.7.0"
   }
