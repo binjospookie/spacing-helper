@@ -13,7 +13,7 @@ jobs:
         with:
           node-version: 14
           registry-url: https://registry.npmjs.org/
-      - run: yarn
-      - run: yarn run clean-publish
+      - run: npm
+      - run: npm run clean-publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}

@@ -6,6 +6,6 @@
     "jest.config.json"
   ],
   "fields": ["devDependencies", "scripts"],
-  "packageManager": "yarn",
+  "packageManager": "npm",
   "access": "public"
 }
