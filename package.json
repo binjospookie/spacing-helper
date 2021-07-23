@@ -1,6 +1,6 @@
 {
   "name": "spacing-helper",
-  "version": "4.1.4",
+  "version": "4.1.5",
   "description": "Standalone helper for creating consistent spacing between the elements of your UI",
   "source": "src/index.js",
   "main": "build/index.js",
@@ -38,7 +38,6 @@
     "build:js": "terser --compress --comments=false --mangle --module --output ./build/index.js  -- ./src/index.js",
     "copy:types": "cp src/index.d.ts ./build/index.d.ts",
     "build": "rm -rf ./build && mkdir ./build && yarn run build:js && yarn run copy:types",
-    "prepublishOnly": "yarn run build",
     "test": "NODE_OPTIONS=--experimental-vm-modules npx jest --coverage --no-cache",
     "clean-publish": "clean-publish"
   },
