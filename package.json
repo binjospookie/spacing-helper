@@ -1,12 +1,14 @@
 {
   "name": "spacing-helper",
-  "version": "4.1.5",
+  "version": "4.1.6",
   "description": "Standalone helper for creating consistent spacing between the elements of your UI",
-  "source": "src/index.js",
-  "main": "build/index.js",
-  "module": "build/index.js",
-  "types": "build/index.d.ts",
   "type": "module",
+  "source": "src/index.js",
+  "exports": "./build/index.js",
+  "main": "./build/index.cjs",
+  "module": "./build/index.module.js",
+  "unpkg": "./build/index.umd.js",
+  "types": "build/index.d.ts",
   "license": "MIT",
   "author": "Viktor Pasynok",
   "email": "binjospookie@gmail.com",
@@ -35,7 +37,7 @@
   },
   "homepage": "https://github.com/binjospookie/spacing-helper#readme",
   "scripts": {
-    "build:js": "terser --compress --comments=false --mangle --module --output ./build/index.js  -- ./src/index.js",
+    "build:js": "microbundle --compress --no-sourcemap --no-raw",
     "copy:types": "cp src/index.d.ts ./build/index.d.ts",
     "build": "rm -rf ./build && mkdir ./build && yarn run build:js && yarn run copy:types",
     "test": "NODE_OPTIONS=--experimental-vm-modules npx jest --coverage --no-cache",
@@ -44,6 +46,7 @@
   "devDependencies": {
     "clean-publish": "^2.2.0",
     "jest": "27.0.6",
+    "microbundle": "^0.13.3",
     "terser": "^5.7.0"
   }
 }
