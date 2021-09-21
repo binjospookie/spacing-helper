@@ -1,4 +1,4 @@
-const { createSpacing } = require('../../build/index.cjs');
+import { createSpacing } from '../../build/index.cjs';
 
 const spacingDefault = createSpacing({});
 const spacingEight = createSpacing({ factor: 8 });
