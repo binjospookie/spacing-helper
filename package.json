@@ -44,7 +44,7 @@
     "clean-publish": "clean-publish"
   },
   "devDependencies": {
-    "clean-publish": "^2.2.0",
+    "clean-publish": "^3.0.2",
     "jest": "27.2.1",
     "microbundle": "^0.13.3",
     "terser": "^5.7.0"
