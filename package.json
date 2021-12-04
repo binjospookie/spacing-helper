@@ -34,18 +34,23 @@
   },
   "homepage": "https://github.com/binjospookie/spacing-helper#readme",
   "scripts": {
-    "build:js": "parcel build --no-source-maps --no-cache --detailed-report --minify",
+    "build:js": "parcel build --no-source-maps --no-cache --detailed-report",
     "copy:types": "cp src/index.d.ts ./dist/index.d.ts",
     "build": "npm run build:js && npm run copy:types",
     "test": "NODE_OPTIONS=--experimental-vm-modules npx jest --coverage --no-cache",
     "clean-publish": "clean-publish"
   },
   "devDependencies": {
+    "@swc/core": "^1.2.117",
+    "@swc/jest": "^0.2.11",
     "clean-publish": "3",
-    "jest": "27",
+    "jest": "^27.4.3",
     "parcel": "2"
   },
   "targets": {
-    "types": false
+    "types": false,
+    "main": {
+      "optimize": true
+    }
   }
 }

@@ -5,5 +5,7 @@
       "statements": 100
     }
   },
-  "transform": {}
+  "transform": {
+    "^.+\\.(t|j)sx?$": "@swc/jest"
+  }
 }
