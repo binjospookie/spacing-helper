@@ -45,7 +45,7 @@
   },
   "devDependencies": {
     "clean-publish": "^3.4.5",
-    "jest": "27.4.7",
+    "jest": "28.0.1",
     "microbundle": "^0.14.0"
   }
 }
