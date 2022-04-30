@@ -39,13 +39,13 @@
   "scripts": {
     "build:js": "microbundle --compress --no-sourcemap --no-raw",
     "copy:types": "cp src/index.d.ts ./build/index.d.ts",
-    "build": "rm -rf ./build && mkdir ./build && npm run build:js && npm run copy:types",
-    "test": "NODE_OPTIONS=--experimental-vm-modules npx jest --coverage --no-cache",
+    "build": "rm -rf ./build && mkdir ./build && npm run build:js & npm run copy:types && wait",
+    "test": "uvu",
     "clean-publish": "clean-publish"
   },
   "devDependencies": {
-    "clean-publish": "^3.4.5",
-    "jest": "27.4.7",
-    "microbundle": "^0.14.0"
+    "clean-publish": "4",
+    "microbundle": "^0.15.0",
+    "uvu": "^0.5.3"
   }
 }

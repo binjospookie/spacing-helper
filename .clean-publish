@@ -2,8 +2,7 @@
   "files": [
     ".vscode",
     ".github",
-    ".yarnclean",
-    "jest.config.json"
+    ".yarnclean"
   ],
   "fields": ["devDependencies", "scripts"],
   "packageManager": "npm",

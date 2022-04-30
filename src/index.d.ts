@@ -11,11 +11,11 @@ type S2 = string;
 type S3 = string;
 type S4 = string;
 
-export interface ISpacingFn {
-  (): S0;
-  (first: number): S1;
-  (first: number, second: number): S2;
-  (first: number, second: number, third: number): S3;
-  (first: number, second: number, third: number, fourth: number): S4;
+export interface SpacingFn {
+  (): string;
+  (first: number): string;
+  (first: number, second: number): string;
+  (first: number, second: number, third: number): string;
+  (first: number, second: number, third: number, fourth: number): string;
 }
-export declare const createSpacing: (data: CreateSpacing) => ISpacingFn;
+export declare const createSpacing: (data: CreateSpacing) => SpacingFn;
