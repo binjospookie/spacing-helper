@@ -14,23 +14,22 @@ export const createSpacing = ({ factor = 8, divisor = 1, precision = 2, units = 
     return valueToCache;
   };
 
-  // yes, it's faster than reduce
   return (first = 1, second, third, fourth) => {
-    let res = transform(first);
+    let res = [transform(first)];
 
     if (second * 0 === 0) {
-      res += ` ${transform(second)}`;
+      res.push(transform(second))
 
       if (third * 0 === 0) {
-        res += ` ${transform(third)}`;
+        res.push(transform(third))
 
         if (fourth * 0 === 0) {
-          res += ` ${transform(fourth)}`;
+          res.push(transform(fourth))
         }
       }
     }
 
-    return res
+    return res.join(' ')
   };
 };
 

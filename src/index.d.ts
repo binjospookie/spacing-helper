@@ -5,12 +5,6 @@ export interface CreateSpacing {
   readonly units?: string;
 }
 
-type S0 = string;
-type S1 = string;
-type S2 = string;
-type S3 = string;
-type S4 = string;
-
 export interface SpacingFn {
   (): string;
   (first: number): string;
