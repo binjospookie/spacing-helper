@@ -44,7 +44,7 @@
     "clean-publish": "clean-publish"
   },
   "devDependencies": {
-    "clean-publish": "5.1.0",
+    "clean-publish": "6.0.1",
     "microbundle": "^0.15.1",
     "uvu": "^0.5.6"
   }
