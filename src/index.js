@@ -1,12 +1,10 @@
 export const createSpacing = ({ factor = 8, divisor = 1, precision = 2, units = 'px' }) => {
   const parsedPrecision = 10 ** precision;
   const factorParsed = (factor / divisor) * parsedPrecision;
-  const cache = new Map();
 
-  // `value` and `res` below are locals, never arguments: declaring them as parameters costs fewer bytes than `let`
-  const transform = (spacing, value) =>
-    cache.get(spacing) || (cache.set(spacing, (value = ~~(spacing * factorParsed) / parsedPrecision + units)), value);
+  const transform = (spacing) => ~~(spacing * factorParsed) / parsedPrecision + units;
 
+  // `res` is a local, never an argument: declaring it as a parameter costs fewer bytes than `let`
   return (first = 1, second, third, fourth, res) => {
     res = transform(first);
 
