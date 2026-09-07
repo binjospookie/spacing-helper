@@ -3,12 +3,12 @@ export const createSpacing = ({ factor = 8, divisor = 1, precision = 2, units = 
   const factorParsed = (factor / divisor) * parsedPrecision;
   const cache = new Map();
 
-  // `value` is a local, never an argument: it keeps the freshly built string so a miss doesn't read the cache twice
+  // `value` and `res` below are locals, never arguments: declaring them as parameters costs fewer bytes than `let`
   const transform = (spacing, value) =>
     cache.get(spacing) || (cache.set(spacing, (value = ~~(spacing * factorParsed) / parsedPrecision + units)), value);
 
-  return (first = 1, second, third, fourth) => {
-    let res = transform(first);
+  return (first = 1, second, third, fourth, res) => {
+    res = transform(first);
 
     if (second * 0 === 0) {
       res += ' ' + transform(second);
