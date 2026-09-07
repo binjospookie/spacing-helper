@@ -3,16 +3,9 @@ export const createSpacing = ({ factor = 8, divisor = 1, precision = 2, units = 
   const factorParsed = (factor / divisor) * parsedPrecision;
   const cache = new Map();
 
-  const transform = (spacing) => {
-    const valueFromCache = cache.get(spacing);
-    if (valueFromCache) {
-      return valueFromCache;
-    }
-
-    const valueToCache = `${~~(spacing * factorParsed) / parsedPrecision}${units}`;
-    cache.set(spacing, valueToCache);
-    return valueToCache;
-  };
+  // `value` is a local, never an argument: it keeps the freshly built string so a miss doesn't read the cache twice
+  const transform = (spacing, value) =>
+    cache.get(spacing) || (cache.set(spacing, (value = ~~(spacing * factorParsed) / parsedPrecision + units)), value);
 
   return (first = 1, second, third, fourth) => {
     let res = transform(first);
